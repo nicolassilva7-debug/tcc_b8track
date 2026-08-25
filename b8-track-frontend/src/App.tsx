@@ -1,29 +1,16 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
+import Dashboard from './pages/Dashboard';
+import Motocicletas from './pages/Motocicletas';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route
-            path="/"
-            element={
-              <div>
-                <h1>Dashboard</h1>
-                <p>Bem-vindo ao B8 TRACK.</p>
-              </div>
-            }
-          />
+          <Route path="/" element={<Dashboard />} />
 
-          <Route
-            path="/motocicletas"
-            element={
-              <div>
-                <h1>Motocicletas</h1>
-              </div>
-            }
-          />
+          <Route path="/motocicletas" element={<Motocicletas />} />
 
           <Route
             path="/modificacoes"

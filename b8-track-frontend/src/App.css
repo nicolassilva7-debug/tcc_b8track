@@ -17,6 +17,101 @@
   }
 }
 
+.charts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.charts-grid .chart-card {
+  flex: 1 1 400px;
+  min-width: 0;
+  padding: 16px;
+}
+
+.chart-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ccc;
+}
+
+.bottom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.bottom-grid .info-card {
+  flex: 1 1 300px;
+  min-width: 0;
+  padding: 16px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.modifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.modification-item:last-child {
+  border-bottom: none;
+}
+
+.mod-nome {
+  display: block;
+  font-size: 13px;
+  color: #eee;
+}
+
+.mod-data {
+  display: block;
+  font-size: 11px;
+  color: #888;
+}
+
+.mod-custo {
+  font-size: 13px;
+  font-weight: 600;
+  color: #facc15;
+}
+
+.investment-total {
+  font-size: 28px;
+  font-weight: 700;
+  color: #facc15;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .charts-grid,
+  .bottom-grid {
+    flex-direction: column;
+  }
+}
+
 .hero {
   position: relative;
 
@@ -181,4 +276,199 @@
     right: 0;
     border-right-color: var(--border);
   }
+}/* Container dos 3 cards alinhados em colunas lado a lado */
+.bottom-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  margin-top: 24px !important;
+  width: 100% !important;
+}
+
+/* Estilo padronizado e limpo para os cards */
+.info-card {
+  background-color: #18181b !important;
+  border: 1px solid #27272a !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.chart-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #f4f4f5 !important;
+  margin-bottom: 16px !important;
+}
+
+/* Fix para a lista de modificações (sem marcadores pretos soltos) */
+.modifications-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.modification-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid #27272a !important;
+}
+
+.modification-item:last-child {
+  border-bottom: none !important;
+}
+
+.mod-nome {
+  display: block !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #e4e4e7 !important;
+}
+
+.mod-data {
+  display: block !important;
+  font-size: 11px !important;
+  color: #71717a !important;
+  margin-top: 2px !important;
+}
+
+.mod-custo {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #eab308 !important;
+}
+
+/* Fix para a tabela de detalhes do Último Track Day */
+.info-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 0 !important;
+  border-bottom: 1px solid #27272a !important;
+}
+
+.info-row:last-child {
+  border-bottom: none !important;
+}
+
+.stat-label {
+  font-size: 12px !important;
+  color: #71717a !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.stat-value {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #f4f4f5 !important;
+}
+
+.stat-highlight {
+  color: #eab308 !important;
+}
+
+/* Fix para o card de Investimento */
+.investment-total {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  color: #eab308 !important;
+  margin-top: 8px !important;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .bottom-grid {
+    grid-template-columns: 1fr !important;
+  }
+}/* Anel de progresso compartilhado (Dashboard + Motocicletas) */
+.progress-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-ring svg {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-value {
+  position: absolute;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+}
+
+/* Botão "Ver detalhes" do card da moto */
+.moto-detalhes-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-alt);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.moto-detalhes-btn:hover {
+  border-color: var(--accent-yellow);
+  background: var(--accent-yellow-soft);
+  color: var(--accent-yellow);
+}
+
+/* Link "Ver todas" no cabeçalho de cards */
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.link-ver-todas {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-yellow);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.link-ver-todas:hover {
+  text-decoration: underline;
+}
+
+/* Card de investimento dividido: total + anel de progresso lado a lado */
+.investimento-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.investimento-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.investimento-progress-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
 }

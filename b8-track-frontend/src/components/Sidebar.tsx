@@ -1,4 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import {
+  LayoutDashboard,
+  Bike,
+  Wrench,
+  Flag,
+  Timer,
+} from 'lucide-react';
 
 function Sidebar() {
   return (
@@ -10,27 +17,33 @@ function Sidebar() {
 
       <nav className="sidebar-nav">
         <NavLink to="/" end>
-          Dashboard
+          <LayoutDashboard />
+          <span>Dashboard</span>
         </NavLink>
 
         <NavLink to="/motocicletas">
-          Motocicletas
+          <Bike />
+          <span>Motocicletas</span>
         </NavLink>
 
         <NavLink to="/modificacoes">
-          Modificações
+          <Wrench />
+          <span>Modificações</span>
         </NavLink>
 
         <NavLink to="/track-days">
-          Track Days
+          <Flag />
+          <span>Track Days</span>
         </NavLink>
 
         <NavLink to="/sessoes">
-          Sessões
+          <Timer />
+          <span>Sessões</span>
         </NavLink>
 
         <NavLink to="/tempos">
-          Tempos de volta
+          <Timer />
+          <span>Tempos de volta</span>
         </NavLink>
       </nav>
     </aside>

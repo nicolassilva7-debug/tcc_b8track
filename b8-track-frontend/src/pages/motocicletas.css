@@ -1,0 +1,149 @@
+.motos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.moto-list-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.moto-list-card:hover {
+  border-color: var(--accent-yellow);
+}
+
+.moto-list-card h2 {
+  font-size: 26px;
+  margin: 6px 0 0;
+}
+
+.moto-list-image {
+  background: var(--bg-surface-alt);
+  border-radius: var(--radius-md);
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moto-list-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+}
+
+.moto-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.moto-spec-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.moto-spec-value {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+.moto-list-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+}
+
+.moto-footer-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.moto-footer-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+}
+
+.moto-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+}
+
+.moto-progress-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.moto-progress-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.moto-progress-ring svg {
+  transform: rotate(-90deg);
+}
+
+.moto-progress-ring-value {
+  position: absolute;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+}
+
+.moto-detalhes-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-alt);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.moto-detalhes-btn:hover {
+  border-color: var(--accent-yellow);
+  background: var(--accent-yellow-soft);
+  color: var(--accent-yellow);
+}
+
+@media (max-width: 768px) {
+  .motos-grid {
+    grid-template-columns: 1fr;
+  }
+}
