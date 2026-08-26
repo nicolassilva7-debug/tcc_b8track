@@ -384,4 +384,190 @@ h1, h2, h3 {
   .moto-card {
     grid-column: auto;
   }
+}/* Anel de progresso compartilhado (Dashboard + Motocicletas) */
+.progress-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-ring svg {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-value {
+  position: absolute;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+}
+
+/* Botão "Ver detalhes" do card da moto */
+.moto-detalhes-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-alt);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.moto-detalhes-btn:hover {
+  border-color: var(--accent-yellow);
+  background: var(--accent-yellow-soft);
+  color: var(--accent-yellow);
+}
+
+/* Link "Ver todas" no cabeçalho de cards */
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.link-ver-todas {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-yellow);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.link-ver-todas:hover {
+  text-decoration: underline;
+}
+
+/* Card de investimento dividido: total + anel de progresso lado a lado */
+.investimento-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.investimento-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.investimento-progress-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}/* ===== GRÁFICOS ===== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.chart-card {
+  padding: 16px;
+}
+
+.chart-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* ===== GRID INFERIOR ===== */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.info-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.modifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.modification-item:last-child {
+  border-bottom: none;
+}
+
+.mod-nome {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.mod-data {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.mod-custo {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+}
+
+.investment-total {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+  margin-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .charts-grid,
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
 }

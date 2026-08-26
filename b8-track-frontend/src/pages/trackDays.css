@@ -1,0 +1,111 @@
+.trackdays-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.trackdays-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.trackday-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.trackday-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 240px;
+}
+
+.trackday-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--accent-yellow-soft);
+  color: var(--accent-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trackday-nome {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.trackday-cidade {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.trackday-stats {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.trackday-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trackday-stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trackday-stat-value {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+.trackday-melhor-volta {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.trackday-melhor-volta .trackday-stat-value {
+  color: var(--accent-yellow);
+}
+
+.trackday-variacao {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.trackday-variacao.positiva {
+  color: var(--accent-green);
+  background: #3ecf6e1a;
+}
+
+.trackday-variacao.negativa {
+  color: var(--accent-red);
+  background: #ff5c5c1a;
+}
+
+@media (max-width: 768px) {
+  .trackday-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
