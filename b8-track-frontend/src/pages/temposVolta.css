@@ -1,61 +1,55 @@
-.temposvolta-header {
+.tempos-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.temposvolta-table {
+.tempos-header {
+  margin-bottom: 8px;
+}
+
+.tempos-table {
   width: 100%;
   border-collapse: collapse;
+  text-align: left;
 }
 
-.temposvolta-table thead th {
-  text-align: left;
+.tempos-table th {
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-bottom: 1px solid #282828;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tempos-table td {
+  padding: 16px;
+  color: #e0e0e0;
+  font-size: 14px;
+  border-bottom: 1px solid #222;
+}
+
+.tempos-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.tempo-valor {
+  color: #f5d000 !important;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 15px !important;
+}
+
+.badge-melhor {
+  background-color: rgba(245, 208, 0, 0.15);
+  color: #f5d000;
+  padding: 4px 10px;
+  border-radius: 20px;
   font-size: 11px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--text-muted);
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.temposvolta-table tbody td {
-  padding: 14px 16px;
-  font-size: 13px;
-  color: var(--text-primary);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.temposvolta-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.temposvolta-table tbody tr:hover {
-  background: var(--bg-surface-alt);
-}
-
-.temposvolta-tempo-cell {
-  font-family: var(--font-display);
-  font-variant-numeric: tabular-nums;
-}
-
-.temposvolta-melhor-cell {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  color: var(--accent-yellow);
-}
-
-.temposvolta-badge {
-  margin-left: 8px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #0a0a0c;
-  background: var(--accent-yellow);
-  padding: 2px 8px;
-  border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }

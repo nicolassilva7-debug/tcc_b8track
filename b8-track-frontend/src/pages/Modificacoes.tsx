@@ -1,11 +1,7 @@
-import { Plus } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import { modificacoes } from '../data/mockModificacoes';
 import './modificacoes.css';
 
 function Modificacoes() {
-  const navigate = useNavigate();
-
   return (
     <div>
       <div className="modificacoes-header">
@@ -15,10 +11,6 @@ function Modificacoes() {
             {modificacoes.length} modificaç{modificacoes.length === 1 ? 'ão registrada' : 'ões registradas'}
           </p>
         </div>
-        <button className="btn-primary" onClick={() => navigate('/modificacoes/nova')}>
-          <Plus size={16} />
-          Nova
-        </button>
       </div>
 
       <div className="card">

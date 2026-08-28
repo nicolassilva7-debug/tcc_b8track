@@ -1,4 +1,4 @@
-import { Flag, Plus, Thermometer, Timer, Users, ArrowRight } from 'lucide-react';
+import { Flag, Thermometer, Timer, Users, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { trackDays } from '../data/mockTrackDays';
 import './trackDays.css';
@@ -13,10 +13,6 @@ function TrackDays() {
           <h3 className="chart-title" style={{ marginBottom: 4 }}>Track Days</h3>
           <p className="stat-label">Registre e acompanhe sua evolução em pista</p>
         </div>
-        <button className="btn-primary" onClick={() => navigate('/track-days/novo')}>
-          <Plus size={16} />
-          Novo Track Day
-        </button>
       </div>
 
       <div className="trackdays-list">
@@ -73,7 +69,7 @@ function TrackDays() {
             <button
               className="moto-detalhes-btn"
               style={{ width: 'auto', margin: 0, padding: '8px 14px' }}
-              onClick={() => navigate(`/track-days/${td.id}`)}
+              onClick={() => navigate('/sessoes')}
             >
               Ver detalhes
               <ArrowRight size={14} />

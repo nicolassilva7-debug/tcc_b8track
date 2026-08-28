@@ -141,9 +141,9 @@ function Dashboard() {
               <XAxis dataKey="data" stroke="#888" fontSize={12} />
               <YAxis stroke="#888" fontSize={12} tickFormatter={(v) => formatTime(v)} />
               <Tooltip
-  contentStyle={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: '8px' }}
-  formatter={(value) => formatTime(Number(value))}
-/>
+                contentStyle={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: '8px' }}
+                formatter={(value) => formatTime(Number(value))}
+              />
               <Line type="monotone" dataKey="melhorVoltaSegundos" name="Melhor volta" stroke="#f5d000" strokeWidth={2} />
             </LineChart>
           </ResponsiveContainer>

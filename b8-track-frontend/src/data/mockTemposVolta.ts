@@ -1,19 +1,20 @@
-// src/data/mockTemposVolta.ts
-
-export interface TempoDeVolta {
+export interface RegistroTempo {
   id: string;
-  sessao: string;
-  numeroVolta: number;
-  tempo: string;
-  melhorDaSessao: boolean;
+  data: string;
+  trackDayLocal: string;
+  motoNome: string;
+  melhorVoltaSegundos: number;
+  melhorVoltaTexto: string;
 }
 
-export const temposDeVolta: TempoDeVolta[] = [
-  { id: '1', sessao: 'Velo Città - Sessão 2', numeroVolta: 1, tempo: '1:52.10', melhorDaSessao: false },
-  { id: '2', sessao: 'Velo Città - Sessão 2', numeroVolta: 2, tempo: '1:49.40', melhorDaSessao: false },
-  { id: '3', sessao: 'Velo Città - Sessão 2', numeroVolta: 3, tempo: '1:46.80', melhorDaSessao: true },
-  { id: '4', sessao: 'Velo Città - Sessão 2', numeroVolta: 4, tempo: '1:47.30', melhorDaSessao: false },
-  { id: '5', sessao: 'Interlagos - Sessão 1', numeroVolta: 1, tempo: '1:51.00', melhorDaSessao: false },
-  { id: '6', sessao: 'Interlagos - Sessão 1', numeroVolta: 2, tempo: '1:47.20', melhorDaSessao: true },
-  { id: '7', sessao: 'Interlagos - Sessão 1', numeroVolta: 3, tempo: '1:48.50', melhorDaSessao: false },
+export const registrosTempo: RegistroTempo[] = [
+  { id: 't1', data: '18/02/2024', trackDayLocal: 'Velo Città', motoNome: 'Yamaha R6', melhorVoltaSegundos: 106.8, melhorVoltaTexto: '1:46.80' },
+  { id: 't2', data: '28/04/2024', trackDayLocal: 'Autódromo de Goiânia', motoNome: 'Yamaha R6', melhorVoltaSegundos: 107.2, melhorVoltaTexto: '1:47.20' },
+  { id: 't3', data: '12/05/2024', trackDayLocal: 'Autódromo de Interlagos', motoNome: 'Yamaha R6', melhorVoltaSegundos: 106.8, melhorVoltaTexto: '1:46.80' },
 ];
+
+export function formatTime(totalSeconds: number): string {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = (totalSeconds % 60).toFixed(2);
+  return `${minutes}:${seconds.padStart(5, '0')}`;
+}
