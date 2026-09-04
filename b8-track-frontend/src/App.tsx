@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import { Login } from './pages/Login';
 import MainLayout from './layouts/MainLayout';
+
 import Dashboard from './pages/Dashboard';
 import Motocicletas from './pages/Motocicletas';
 import Modificacoes from './pages/Modificacoes';
@@ -12,32 +14,53 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Login */}
-        <Route path="/login" element={<Login />} />
 
-        {/* Área principal */}
+        {/* LOGIN */}
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        {/* SISTEMA PRINCIPAL */}
         <Route element={<MainLayout />}>
-          {/* Dashboard */}
-          <Route path="/" element={<Dashboard />} />
 
-          {/* Motocicletas */}
-          <Route path="/motocicletas" element={<Motocicletas />} />
+          <Route
+            path="/"
+            element={<Dashboard />}
+          />
 
-          {/* Modificações */}
-          <Route path="/modificacoes" element={<Modificacoes />} />
+          <Route
+            path="/motocicletas"
+            element={<Motocicletas />}
+          />
 
-          {/* Track Days */}
-          <Route path="/track-days" element={<TrackDays />} />
+          <Route
+            path="/modificacoes"
+            element={<Modificacoes />}
+          />
 
-          {/* Todas as sessões */}
-          <Route path="/sessoes" element={<Sessoes />} />
+          <Route
+            path="/track-days"
+            element={<TrackDays />}
+          />
 
-          {/* Sessões de um Track Day específico */}
-          <Route path="/sessoes/:id" element={<Sessoes />} />
+          <Route
+            path="/sessoes"
+            element={<Sessoes />}
+          />
 
-          {/* Tempos de volta */}
-          <Route path="/tempos" element={<TemposVolta />} />
+          <Route
+            path="/sessoes/:id"
+            element={<Sessoes />}
+          />
+
+          <Route
+            path="/tempos"
+            element={<TemposVolta />}
+          />
+
         </Route>
+
       </Routes>
     </BrowserRouter>
   );

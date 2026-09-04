@@ -1,3 +1,7 @@
+/* =========================================
+   LISTA DE MOTOCICLETAS
+========================================= */
+
 .motos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -142,8 +146,450 @@
   color: var(--accent-yellow);
 }
 
+
+/* =========================================
+   TELA DE DETALHES DA MOTOCICLETA
+========================================= */
+
+.moto-detalhes-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.moto-detalhes-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.moto-voltar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  margin-top: 2px;
+
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.15s,
+    background 0.15s,
+    color 0.15s;
+}
+
+.moto-voltar-btn:hover {
+  border-color: var(--accent-yellow);
+  background: var(--accent-yellow-soft);
+  color: var(--accent-yellow);
+}
+
+.moto-detalhes-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.moto-detalhes-title .moto-card-header {
+  margin-bottom: 2px;
+}
+
+.moto-detalhes-title h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+.moto-detalhes-title p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+
+/* =========================================
+   RESUMO
+========================================= */
+
+.moto-detalhes-resumo {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(400px, 1.6fr);
+  gap: 20px;
+}
+
+.moto-detalhes-foto {
+  min-height: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.moto-detalhes-foto .moto-placeholder {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+
+/* =========================================
+   PERFORMANCE
+========================================= */
+
+.moto-performance-card {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.moto-performance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 16px;
+}
+
+.moto-performance-header h2 {
+  margin: 4px 0 0;
+  font-size: 24px;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+.moto-performance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.performance-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 14px;
+
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.performance-item svg {
+  color: var(--accent-yellow);
+  margin-bottom: 2px;
+}
+
+.performance-item span {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.performance-item strong {
+  font-size: 21px;
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+}
+
+.performance-item small {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+
+/* =========================================
+   MÉTRICAS
+========================================= */
+
+.moto-detalhes-metricas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.detalhe-metrica {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detalhe-metrica svg {
+  flex-shrink: 0;
+  color: var(--accent-yellow);
+}
+
+.detalhe-metrica div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.detalhe-metrica span {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detalhe-metrica strong {
+  font-size: 17px;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.moto-detalhes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 14px;
+}
+
+.section-title svg {
+  color: var(--accent-yellow);
+}
+
+.section-title h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+
+/* =========================================
+   MODIFICAÇÕES
+========================================= */
+
+.modificacoes-detalhes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.modificacao-detalhe-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.modificacao-detalhe-item:last-child {
+  border-bottom: none;
+}
+
+.modificacao-detalhe-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modificacao-detalhe-item strong {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.modificacao-detalhe-item span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.modificacao-detalhe-item > strong {
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+}
+
+
+/* =========================================
+   SEM MODIFICAÇÕES
+========================================= */
+
+.modificacao-vazia {
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.modificacao-vazia svg {
+  color: var(--accent-yellow);
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+========================================= */
+
+.moto-detalhes-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+}
+
+
+/* =========================================
+   HISTÓRICO EM PISTA
+========================================= */
+
+.historico-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.historico-item:last-child {
+  border-bottom: none;
+}
+
+.historico-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.historico-item strong {
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.historico-item span {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.tempo-destaque {
+  font-size: 16px !important;
+  font-family: var(--font-display);
+  color: var(--accent-yellow) !important;
+}
+
+
+/* =========================================
+   EVOLUÇÃO
+========================================= */
+
+.evolucao-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.evolucao-item:last-child {
+  border-bottom: none;
+}
+
+.evolucao-item span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.evolucao-item strong {
+  font-size: 14px;
+  font-family: var(--font-display);
+  color: var(--accent-yellow);
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1000px) {
+  .moto-detalhes-resumo {
+    grid-template-columns: 1fr;
+  }
+
+  .moto-detalhes-foto {
+    min-height: 220px;
+  }
+
+  .moto-detalhes-metricas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .moto-detalhes-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 @media (max-width: 768px) {
   .motos-grid {
     grid-template-columns: 1fr;
+  }
+
+  .moto-detalhes-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .moto-detalhes-title h1 {
+    font-size: 27px;
+  }
+
+  .moto-performance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .moto-detalhes-metricas {
+    grid-template-columns: 1fr;
+  }
+
+  .modificacao-detalhe-item {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .modificacao-detalhe-item > strong {
+    white-space: nowrap;
   }
 }
